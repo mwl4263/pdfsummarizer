@@ -4,6 +4,7 @@ from tkinter import *   # from tkinter import Tk for Python 3.x
 from tkinter.filedialog import askopenfilename
 from transformers import T5ForConditionalGeneration, T5Tokenizer
 import os
+from tqdm import tqdm
 #set up file picker
 Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
 filename = askopenfilename(defaultextension=".pdf") # show an "Open" dialog box and return the path to the selected file
@@ -20,8 +21,9 @@ with open ("output.md", "w") as f:
     f.write("# Summary\n\n")
     f.write("#### Generated using AI language models: distilbart and gec-t5_small for grammar correction\n\n")
     print("=== SUMMARY GENERATION HAS BEGUN ===")
-    for x in reader.pages:
-        text = x.extract_text()
+    print("=== Pages Summarized: ===")
+    for x in tqdm(range(len(reader.pages))):
+        text = reader.pages[x].extract_text()
         response = summarizer(text)
         text_response= response[0]['summary_text']
         tokenized_sentence = tokenizer('gec: ' + text_response, max_length=128, truncation=True, padding='max_length', return_tensors='pt')
