@@ -28,8 +28,6 @@
 
 - The W 3 C XML Recommendation is available at www. w 3 C. org / TR / XML. This chapter deals with some of the current uses of XML and gives a foretaste of what is coming in the chapters ahead. XML is truly the best-choice-choice for web services and Ajax.
 
-- 
-
 - XML is used both as a convenient way to serialize objects in a cross-platform manner and as a means of returning results in a single-sally accepted fashion. XML is also used heavily in document-management and web services. The main reasons for using XML are that it’s so much easier to parse than the traditional name / value pair style.
 
 - Most modern high-end database systems, such as Or acle and SQL Server, can store XML documents. XML is used to store information such as a document’s author, the date of cre-orativeation, and some modifications. XML should enable updates using the X Query language, which is briefly covered later.

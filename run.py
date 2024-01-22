@@ -3,7 +3,7 @@ from PyPDF2 import PdfReader
 from tkinter import *   # from tkinter import Tk for Python 3.x
 from tkinter.filedialog import askopenfilename
 from transformers import T5ForConditionalGeneration, T5Tokenizer
-
+import os
 #set up file picker
 Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
 filename = askopenfilename(defaultextension=".pdf") # show an "Open" dialog box and return the path to the selected file
@@ -42,4 +42,5 @@ with open ("output.md", "w") as f:
             f.write("- " + corrected_sentence + "\n\n")
 
 f.close()
-print("The summary has been generated.  Open output.md to view the summary.")
+print("=== The summary has been generated.  Open summary.pdf to view the summary. ===")
+os.system("md2pdf output.md summary.pdf")
