@@ -8,7 +8,7 @@ This software can summarize PDFs.  Leverages a few different AI models to do so.
 
 2. ```pip install -r requirements.txt```
 
-3. ```python3 run.py```
+3. ```python3 summarize.py```
 
 ## To Run
 
