@@ -36,12 +36,12 @@ for x in tqdm(range(len(reader.pages))):
     text = reader.pages[x].extract_text()
     response = summarizer(text)
     text_response= response[0]['summary_text']
-    tokenized_sentence = tokenizer('gec: ' + text_response, max_length=128, truncation=True, padding='max_length', return_tensors='pt')
+    tokenized_sentence = tokenizer('gec: ' + text_response, max_length=300, truncation=True, padding='max_length', return_tensors='pt')
     corrected_sentence = tokenizer.decode(
     model.generate(
         input_ids = tokenized_sentence.input_ids,
         attention_mask = tokenized_sentence.attention_mask,
-        max_length=128,
+        max_length=300,
         num_beams=5,
         early_stopping=True,
             )[0],
