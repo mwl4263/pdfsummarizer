@@ -12,6 +12,6 @@ This software can summarize PDFs.  Leverages a few different AI models to do so.
 
 ## To Run
 
-```python3 run.py```
+```python3 summarize.py```
 
 Follow the instructions in your terminal.  The first run may take longer as it needs to download the models.
