@@ -1,0 +1,6 @@
+# Summary
+
+#### Generated using AI language models: bart-large-cnn and gec-t5_small for grammar correction
+
+- Mason Lapine is an intern at the Rochester Institute of Technology in New York. He developed a web portal capable of tracking company technical data using Windows Powershell. He also developed a website to help fund and fund information about Canstruction, a canned food drive competition. Lapine has a 3.46 GPA.
+
