@@ -3,7 +3,6 @@ from PyPDF2 import PdfReader
 from tkinter import *   # from tkinter import Tk for Python 3.x
 from tkinter.filedialog import askopenfilename, asksaveasfile
 from transformers import T5ForConditionalGeneration, T5Tokenizer
-import os
 from tqdm import tqdm
 #set up file picker
 Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
