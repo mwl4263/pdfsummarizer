@@ -21,7 +21,7 @@ if f is None: # asksaveasfile return `None` if dialog closed with "cancel".
 print("- done -")
 
 print("=== IGNORE THIS MESSAGE: ===")
-summarizer = pipeline("summarization", model = "sshleifer/distilbart-cnn-12-6")
+summarizer = pipeline("summarization", model = "facebook/bart-large-cnn")
 
 model = T5ForConditionalGeneration.from_pretrained("Unbabel/gec-t5_small")
 tokenizer = T5Tokenizer.from_pretrained('t5-small')
@@ -29,7 +29,7 @@ reader = PdfReader(filename)
 text = ""
 print("=== END IGNORE ===")
 f.write("# Summary\n\n")
-f.write("#### Generated using AI language models: distilbart and gec-t5_small for grammar correction\n\n")
+f.write("#### Generated using AI language models: bart-large-cnn and gec-t5_small for grammar correction\n\n")
 print("=== Summary generation has begun. ===")
 print("=== Pages Summarized: ===")
 for x in tqdm(range(len(reader.pages))):
